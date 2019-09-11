@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜筛子</title>
+    <style>
+        body{
+            font-size:100px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<!--<img src="image/1.png" />-->
+<div id="message"></div>
+</body>
+</html>
+
+<script>
+    function Guess() {
+        var guess=prompt("请输入猜测值");
+        // 如果猜对了，直接跳出
+        var bingo=false;
+        if (bingo) {
+            return;
+        }
+        if (guess==dice) {
+            document.getElementById("message").innerHTML="你猜中了";
+            // document.write("你猜中了");
+            bingo=true;
+        }
+        else if (guess<dice) {
+            document.getElementById("message").innerHTML="你猜小了";
+            // document.write("你猜小了");
+        }
+        else {
+            document.getElementById("message").innerHTML="你猜大了";
+            // document.write("你猜大了");
+        }
+    }
+    var dice=Math.floor(6*Math.random())+1;
+    console.info(dice);
+    // document.write(dice);
+    // document.write("<img src=\"images/"+dice+".png\" />")
+    // var guess=prompt("请输入猜测值")
+    // if (guess==dice) {
+    //    document.write("你猜中了");
+    // }
+    // else if (guess<dice) {
+    //    document.write("你猜小了");
+    // }
+    // else {
+    //    document.write("你猜大了");
+    // }
+    Guess();
+    Guess();
+    Guess();
+
+</script>
